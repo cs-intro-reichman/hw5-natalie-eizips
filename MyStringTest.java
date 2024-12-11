@@ -50,9 +50,9 @@ public class MyStringTest {
 
     private static void testRemove() {
         System.out.println("\nTesting remove:");
-        System.out.println("committee - meet -> " + MyString.remove("committee", "meet") + " (expected: comit)");
+        System.out.println("committee - meet -> " + MyString.remove("meet", "committee") + " (expected: comit)");
         System.out.println("abc - abc -> " + MyString.remove("abc", "abc") + " (expected: )");
-        System.out.println("abc - b -> " + MyString.remove("abc", "b") + " (expected: ac)");
-        System.out.println("hello - empty string -> " + MyString.remove("hello", "") + " (expected: hello)");
+        System.out.println("abc - b -> " + MyString.remove("b", "abc") + " (expected: ac)");
+        System.out.println("hello - empty string -> " + MyString.remove("", "hello") + " (expected: hello)");
     }
 } 

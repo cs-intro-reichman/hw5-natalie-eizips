@@ -10,7 +10,7 @@ public class MyString {
         System.out.println(randomStringOfLetters(10));
         System.out.println(spacedString(hello));
         System.out.println(insertRandomly('h', "scat"));
-        System.out.println(remove("meet", "committee"));
+        System.out.println(remove("b", "abc"));
         //// Put your other tests here.
     }
 
@@ -69,7 +69,7 @@ public class MyString {
         for (int i = 0; i < str.length() - 1; i++){
             char ch = str.charAt(i);
             str1 += ch;
-            str1 += ' ';
+            str1 += " ";
         }
         str1 += str.charAt(str.length() - 1);
         return str1;
