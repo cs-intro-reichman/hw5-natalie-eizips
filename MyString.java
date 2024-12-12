@@ -10,6 +10,7 @@ public class MyString {
         System.out.println(randomStringOfLetters(10));
         System.out.println(spacedString(hello));
         System.out.println(insertRandomly('h', "scat"));
+        System.out.println(subsetOf("runi", "running"));
         System.out.println(remove("abc", "b"));
         //// Put your other tests here.
     }
@@ -34,7 +35,7 @@ public class MyString {
 
     /** Returns true if str1 is a subset string str2, false otherwise
      *  Examples:
-     *  subsetOf("sap","space") returns true
+     *  subsetOf("ap","space") returns true
      *  subsetOf("spa","space") returns true
      *  subsetOf("pass","space") returns false
      *  subsetOf("c","space") returns true
@@ -46,9 +47,14 @@ public class MyString {
     public static boolean subsetOf(String str1, String str2) {
         
          for (int i = 0; i < str1.length(); i++){
+            char ch = str1.charAt(i);
+            if (countChar(str2, ch) == 0){
+                return false;
+            }
             if (countChar(str1, str1.charAt(i)) > countChar(str2, str1.charAt(i))){
                 return false;
             }
+
             }
         return true;
     }
