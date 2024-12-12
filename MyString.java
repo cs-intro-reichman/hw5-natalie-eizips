@@ -66,7 +66,7 @@ public class MyString {
         if (str.length() == 0){ //edge case for if the string is empty
             return "";
         }
-        for (int i = 0; i < str.length() - 1; i++){ //goes over all of the letters in the original string
+        for (int i = 0; i < str.length(); i++){ //goes over all of the letters in the original string
             char ch = str.charAt(i); //initializes character according to the index
             str1 += ch; //adds character to new string
             if (i < str.length() - 1) {
