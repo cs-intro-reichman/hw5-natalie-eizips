@@ -108,14 +108,11 @@ public class MyString {
      */
     public static String remove(String str1, String str2) {
         String str = str1;
-        boolean removed;
         for (int i = 0; i < str2.length(); i++){
-            removed = false;
-            for (int j = 0; j < str.length(); j++){
-                if (str2.charAt(i) == str.charAt(j) && !removed) {
-                    str = str.substring(0,j) + str.substring(j + 1);
-                    removed = true;
-                }
+            char ch = str2.charAt(i);
+            int index = str.indexOf(ch);
+            if (index != -1) {
+                str = str.substring(0,index) + str.substring(index + 1);
             }
        }
         return str;
