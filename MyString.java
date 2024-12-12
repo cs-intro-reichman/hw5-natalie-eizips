@@ -62,16 +62,17 @@ public class MyString {
      * @return a string consisting of the characters of str, separated by spaces.
      */
     public static String spacedString(String str) {
-        String str1 = "";
-        if (str.length() == 0){
-            return " ";
+        String str1 = ""; //creates a new empty string
+        if (str.length() == 0){ //edge case for if the string is empty
+            return "";
         }
-        for (int i = 0; i < str.length() - 1; i++){
-            char ch = str.charAt(i);
-            str1 += ch;
-            str1 += " ";
+        for (int i = 0; i < str.length() - 1; i++){ //goes over all of the letters in the original string
+            char ch = str.charAt(i); //initializes character according to the index
+            str1 += ch; //adds character to new string
+            if (i < str.length() - 1) {
+                str1 += " "; // adds a space after all but the last character
+            }
         }
-        str1 += str.charAt(str.length() - 1);
         return str1;
     }
   
