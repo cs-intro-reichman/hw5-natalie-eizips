@@ -10,7 +10,7 @@ public class MyString {
         System.out.println(randomStringOfLetters(10));
         System.out.println(spacedString(hello));
         System.out.println(insertRandomly('h', "scat"));
-        System.out.println(remove("b", "abc"));
+        System.out.println(remove("abc", "b"));
         //// Put your other tests here.
     }
 
@@ -107,12 +107,12 @@ public class MyString {
      * @return a string consisting of str1 minus all the characters of str2
      */
     public static String remove(String str1, String str2) {
-        String str = str2;
+        String str = str1;
         boolean removed;
-        for (int i = 0; i < str1.length(); i++){
+        for (int i = 0; i < str2.length(); i++){
             removed = false;
             for (int j = 0; j < str.length(); j++){
-                if (str1.charAt(i) == str.charAt(j) && !removed) {
+                if (str2.charAt(i) == str.charAt(j) && !removed) {
                     str = str.substring(0,j) + str.substring(j + 1);
                     removed = true;
                 }
