@@ -92,7 +92,7 @@ public class MyString {
         String random = "";
         for (int i = 0; i < n; i++){
             int ch = (int) (Math.random() * 26);
-            random += (char) (ch + 97);
+            random += (char) (ch + 'a');
         }
         return random;
     }
