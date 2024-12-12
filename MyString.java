@@ -87,7 +87,7 @@ public class MyString {
      */
     public static String randomStringOfLetters(int n) {
         if (n == 0){
-            return " ";
+            return "";
         }
         String random = "";
         for (int i = 0; i < n; i++){
